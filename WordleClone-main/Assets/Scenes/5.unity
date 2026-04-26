@@ -313,9 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'O
-
-'
+  m_text: O
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -392,6 +390,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20719337}
   m_CullTransparentMesh: 1
+--- !u!1 &66628985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113272774273375, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 680460770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &77831457
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,9 +478,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -485,18 +488,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: q
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Pop, Assembly-CSharp
-        m_MethodName: PopButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &77831460
@@ -677,7 +668,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -696,9 +687,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -944,7 +935,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -963,9 +954,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1013,6 +1004,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108640085}
   m_CullTransparentMesh: 1
+--- !u!1 &127645760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1548945256195702053, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 1030268360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &171905118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,6 +1279,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176412069}
   m_CullTransparentMesh: 1
+--- !u!1 &181873533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113271701794399, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 1030268360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &188831014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113270835466204, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 189713115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &189713115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1673,7 +1679,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1692,9 +1698,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1876,6 +1882,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200914616}
   m_CullTransparentMesh: 1
+--- !u!1 &204890425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1548945256195702053, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 680460770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &212363218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,7 +1951,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1959,9 +1970,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2226,9 +2237,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2236,18 +2247,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: i
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 266992621}
-        m_TargetAssemblyTypeName: Pop, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &266992624
@@ -2519,7 +2518,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bd32d3248faa464387fdce7fa1afbe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  validkeyCodes: 6100000062000000630000006400000065000000660000006700000068000000690000006a0000006b0000006c0000006d0000006e0000006f000000700000007100000072000000730000007400000075000000760000007700000078000000790000007a000000
 --- !u!4 &296943392
 Transform:
   m_ObjectHideFlags: 0
@@ -2758,7 +2756,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b75d5e10d3b5d4bb3dd311f2b8d86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 1
 --- !u!1 &393944109
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,9 +2839,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2852,18 +2849,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: w
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 393944109}
-        m_TargetAssemblyTypeName: Pop, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &393944112
@@ -3052,6 +3037,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419235731}
   m_CullTransparentMesh: 1
+--- !u!1 &464528450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113271701794399, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 189713115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &483560688
 GameObject:
   m_ObjectHideFlags: 0
@@ -3063,7 +3053,7 @@ GameObject:
   - component: {fileID: 483560689}
   - component: {fileID: 483560690}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: -----GameManager-----
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3097,6 +3087,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWord: 
+  wordLength: 5
+  answersFile: Words/wordle-answers-alphabetical
+  allowedGuessesFile: Words/wordle-allowed-guesses
+  spriteGrey: {fileID: -122496668, guid: 3c25d4de03fd6fb488c540397b2662d0, type: 3}
+  spriteYellow: {fileID: -1063655306, guid: 3c25d4de03fd6fb488c540397b2662d0, type: 3}
+  spriteGreen: {fileID: 21300000, guid: dd513ae19dfc5b546a7dc27221d7790a, type: 3}
+  rows:
+  - tiles:
+    - {fileID: 2026449798}
+    - {fileID: 1957391570}
+    - {fileID: 989574039}
+    - {fileID: 1311568083}
+    - {fileID: 1165490290}
+  - tiles:
+    - {fileID: 1407422677}
+    - {fileID: 1295002512}
+    - {fileID: 716796282}
+    - {fileID: 712907628}
+    - {fileID: 2060425554}
+  - tiles:
+    - {fileID: 204890425}
+    - {fileID: 66628985}
+    - {fileID: 1035687932}
+    - {fileID: 1103543112}
+    - {fileID: 1014357150}
+  - tiles:
+    - {fileID: 846580268}
+    - {fileID: 1002068478}
+    - {fileID: 188831014}
+    - {fileID: 464528450}
+    - {fileID: 895604617}
+  - tiles:
+    - {fileID: 567181945}
+    - {fileID: 1741213943}
+    - {fileID: 1980485347}
+    - {fileID: 1166292640}
+    - {fileID: 566374804}
+  - tiles:
+    - {fileID: 127645760}
+    - {fileID: 977699797}
+    - {fileID: 1410071800}
+    - {fileID: 181873533}
+    - {fileID: 1893009447}
+  keyboardKeys:
+  - {fileID: 77831457}
+  - {fileID: 393944109}
+  - {fileID: 562520366}
+  - {fileID: 510680527}
+  - {fileID: 1799305139}
+  - {fileID: 670788560}
+  - {fileID: 927990991}
+  - {fileID: 266992621}
+  - {fileID: 628079796}
+  - {fileID: 1048366523}
+  - {fileID: 902175493}
+  - {fileID: 1507258579}
+  - {fileID: 2122172080}
+  - {fileID: 2084615538}
+  - {fileID: 1905855308}
+  - {fileID: 1970165168}
+  - {fileID: 1823277359}
+  - {fileID: 108640085}
+  - {fileID: 212363218}
+  - {fileID: 1722741161}
+  - {fileID: 1317011429}
+  - {fileID: 646035192}
+  - {fileID: 91783773}
+  - {fileID: 1765525995}
+  - {fileID: 1813098044}
+  - {fileID: 200083160}
+  - {fileID: 632591354}
+  - {fileID: 1598954685}
+  keyGreyedColor: {r: 0.4, g: 0.4, b: 0.4, a: 1}
+  punchScale: 0.15
+  punchDuration: 0.12
+  flipDuration: 0.25
+  flipDelay: 0.08
+  currentPanel: 0
+  currentTextIndex: 0
 --- !u!1 &506925528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3314,9 +3383,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3324,18 +3393,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: r
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 510680527}
-        m_TargetAssemblyTypeName: Pop, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &510680530
@@ -3593,9 +3650,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3603,18 +3660,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: e
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 562520366}
-        m_TargetAssemblyTypeName: Pop, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &562520369
@@ -3655,6 +3700,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562520366}
   m_CullTransparentMesh: 1
+--- !u!1 &566374804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113272786088262, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 1138955853}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &567181945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1548945256195702053, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 1138955853}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &590398213
 GameObject:
   m_ObjectHideFlags: 0
@@ -4478,9 +4533,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4488,18 +4543,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: o
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 628079796}
-        m_TargetAssemblyTypeName: Pop, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &628079799
@@ -4757,9 +4800,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Backspace
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Backspace
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4871,7 +4914,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -4890,9 +4933,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5023,9 +5066,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5033,18 +5076,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: y
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 670788560}
-        m_TargetAssemblyTypeName: Pop, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &670788563
@@ -5411,6 +5442,16 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1548945254153428136, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
   m_PrefabInstance: {fileID: 680460770}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &712907628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113271701794399, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 626458115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &716796282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113270835466204, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 626458115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &793556056
 GameObject:
   m_ObjectHideFlags: 0
@@ -5581,6 +5622,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &846580268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1548945256195702053, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 189713115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &857426989
 GameObject:
   m_ObjectHideFlags: 0
@@ -5902,6 +5948,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886556667}
   m_CullTransparentMesh: 1
+--- !u!1 &895604617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113272786088262, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 189713115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &902175493
 GameObject:
   m_ObjectHideFlags: 0
@@ -5966,7 +6017,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5985,9 +6036,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6118,9 +6169,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6128,18 +6179,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: u
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 927990991}
-        m_TargetAssemblyTypeName: Pop, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &927990994
@@ -6180,6 +6219,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927990991}
   m_CullTransparentMesh: 1
+--- !u!1 &977699797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113272774273375, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 1030268360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &989574039 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113270835466204, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 1548945255364593596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1002068478 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113272774273375, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 189713115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1014357150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113272786088262, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 680460770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1029860987
 GameObject:
   m_ObjectHideFlags: 0
@@ -6269,7 +6328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b75d5e10d3b5d4bb3dd311f2b8d86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 1
 --- !u!1001 &1030268360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6596,6 +6654,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1548945254153428136, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
   m_PrefabInstance: {fileID: 1030268360}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1035687932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113270835466204, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 680460770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1046912566
 GameObject:
   m_ObjectHideFlags: 0
@@ -6813,9 +6876,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6823,18 +6886,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: p
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1048366523}
-        m_TargetAssemblyTypeName: Pop, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1048366526
@@ -6875,6 +6926,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048366523}
   m_CullTransparentMesh: 1
+--- !u!1 &1103543112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113271701794399, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 680460770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1118418811
 GameObject:
   m_ObjectHideFlags: 0
@@ -7550,6 +7606,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154927840}
   m_CullTransparentMesh: 1
+--- !u!1 &1165490290 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113272786088262, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 1548945255364593596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1166292640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113271701794399, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 1138955853}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1191667319
 GameObject:
   m_ObjectHideFlags: 0
@@ -7689,6 +7755,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1548945254153428136, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
   m_PrefabInstance: {fileID: 1548945255364593596}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1295002512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113272774273375, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 626458115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1303619729
 GameObject:
   m_ObjectHideFlags: 0
@@ -7823,6 +7894,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1303619729}
   m_CullTransparentMesh: 1
+--- !u!1 &1311568083 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113271701794399, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 1548945255364593596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1317011429
 GameObject:
   m_ObjectHideFlags: 0
@@ -7887,7 +7963,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7906,9 +7982,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8141,6 +8217,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337541223}
   m_CullTransparentMesh: 1
+--- !u!1 &1407422677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1548945256195702053, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 626458115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1410071800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113270835466204, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 1030268360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1422440434
 GameObject:
   m_ObjectHideFlags: 0
@@ -8365,7 +8451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b75d5e10d3b5d4bb3dd311f2b8d86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 3
 --- !u!1 &1445776510
 GameObject:
   m_ObjectHideFlags: 0
@@ -8698,7 +8783,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -8717,9 +8802,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8984,9 +9069,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Enter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Submit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9634,7 +9719,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -9653,9 +9738,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9837,6 +9922,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737347679}
   m_CullTransparentMesh: 1
+--- !u!1 &1741213943 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113272774273375, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 1138955853}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1754639609
 GameObject:
   m_ObjectHideFlags: 0
@@ -10035,7 +10125,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -10054,9 +10144,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10187,9 +10277,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10197,18 +10287,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: t
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1799305139}
-        m_TargetAssemblyTypeName: Pop, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1799305142
@@ -10390,7 +10468,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -10409,9 +10487,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10523,7 +10601,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -10542,9 +10620,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10726,6 +10804,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870831511}
   m_CullTransparentMesh: 1
+--- !u!1 &1893009447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113272786088262, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 1030268360}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1905855308
 GameObject:
   m_ObjectHideFlags: 0
@@ -10790,7 +10873,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -10809,9 +10892,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11127,6 +11210,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926690758}
   m_CullTransparentMesh: 1
+--- !u!1 &1957391570 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113272774273375, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 1548945255364593596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1966725309
 GameObject:
   m_ObjectHideFlags: 0
@@ -11325,7 +11413,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -11344,9 +11432,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11394,23 +11482,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970165168}
   m_CullTransparentMesh: 1
---- !u!1 &2036183121 stripped
+--- !u!1 &1980485347 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1548945254153428143, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3182113270835466204, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 1138955853}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2026449798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1548945256195702053, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
   m_PrefabInstance: {fileID: 1548945255364593596}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2036183124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!1 &2060425554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3182113272786088262, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
+  m_PrefabInstance: {fileID: 626458115}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036183121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ee3b6d1b6477474c825af9f12086212, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2072296551
 GameObject:
   m_ObjectHideFlags: 0
@@ -11609,7 +11695,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -11628,9 +11714,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11791,7 +11877,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -11810,9 +11896,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 296943391}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: K_Letter
+      - m_Target: {fileID: 483560690}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AddLetter
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12293,10 +12379,7 @@ PrefabInstance:
     - {fileID: 1548945256195702055, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1548945254153428143, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2036183124}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4089aa2dd314fce408bac36f30ef9a8e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
