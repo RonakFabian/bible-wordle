@@ -216,6 +216,16 @@ public class GameManager : MonoBehaviour
                       LetterResult.Yellow => spriteYellow,
                       _ => spriteGrey,
                   };
+                  // Tint tile with Scripture palette colours
+                  img.color = results[idx] switch
+                  {
+                      LetterResult.Green  => new Color(0.306f, 0.478f, 0.227f),   // #4E7A3A
+                      LetterResult.Yellow => new Color(0.710f, 0.624f, 0.231f),   // #B59F3B
+                      _                   => new Color(0.439f, 0.420f, 0.388f),   // #706B63
+                  };
+                  // Tile text: white on all colored states for readability
+                  TextMeshProUGUI tileText = tile.GetComponentInChildren<TextMeshProUGUI>();
+                  if (tileText != null) tileText.color = Color.white;
                   rt.DOScaleY(1f, flipDuration).SetEase(Ease.OutQuad);
               });
 
@@ -246,14 +256,21 @@ public class GameManager : MonoBehaviour
                 _ => keyGreySprite,
             };
 
-            bool isColored = keyBestResult[c] != LetterResult.Grey;
+            // Tint colour matching Scripture palette
+            Color keyTint = keyBestResult[c] switch
+            {
+                LetterResult.Green  => new Color(0.306f, 0.478f, 0.227f),   // #4E7A3A
+                LetterResult.Yellow => new Color(0.710f, 0.624f, 0.231f),   // #B59F3B
+                _                   => new Color(0.490f, 0.455f, 0.412f),   // #7D7469 grey
+            };
+            // All used keys (grey/yellow/green) get white text; unused stay dark
             foreach (GameObject key in keyboardKeys)
             {
                 TextMeshProUGUI tmp = key.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp == null || !tmp.text.Equals(letter, System.StringComparison.OrdinalIgnoreCase)) continue;
                 Image img = key.GetComponentInChildren<Image>();
-                if (img != null) img.sprite = target;
-                tmp.color = isColored ? Color.black : Color.white;
+                if (img != null) { img.sprite = target; img.color = keyTint; }
+                tmp.color = Color.white;   // all used keys have dark bg → white text
                 break;
             }
         }
