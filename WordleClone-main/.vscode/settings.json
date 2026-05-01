@@ -52,5 +52,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "WordleClone-main.sln"
+    "dotnet.defaultSolution": "WordleClone-main.slnx"
 }

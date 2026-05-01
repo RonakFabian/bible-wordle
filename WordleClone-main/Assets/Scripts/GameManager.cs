@@ -205,6 +205,7 @@ public class GameManager : MonoBehaviour
             GameObject tile = row[idx];
             if (!tile.TryGetComponent(out RectTransform rt)) continue;
             if (!tile.TryGetComponent(out Image img)) continue;
+            TextMeshProUGUI tileTmp = tile.GetComponentInChildren<TextMeshProUGUI>();
 
             rt.DOScaleY(0f, flipDuration)
               .SetEase(Ease.InQuad)
@@ -216,6 +217,7 @@ public class GameManager : MonoBehaviour
                       LetterResult.Yellow => spriteYellow,
                       _ => spriteGrey,
                   };
+                  if (tileTmp != null) tileTmp.color = Color.white;
                   rt.DOScaleY(1f, flipDuration).SetEase(Ease.OutQuad);
               });
 
@@ -246,14 +248,13 @@ public class GameManager : MonoBehaviour
                 _ => keyGreySprite,
             };
 
-            bool isColored = keyBestResult[c] != LetterResult.Grey;
             foreach (GameObject key in keyboardKeys)
             {
                 TextMeshProUGUI tmp = key.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp == null || !tmp.text.Equals(letter, System.StringComparison.OrdinalIgnoreCase)) continue;
                 Image img = key.GetComponentInChildren<Image>();
                 if (img != null) img.sprite = target;
-                tmp.color = isColored ? Color.black : Color.white;
+                tmp.color = Color.white;
                 break;
             }
         }
