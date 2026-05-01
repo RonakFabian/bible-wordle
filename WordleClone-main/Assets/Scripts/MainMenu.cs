@@ -17,6 +17,11 @@ public class MainMenu : MonoBehaviour
     public RectTransform button2Rect;
     public RectTransform button3Rect;
 
+    [Header("Marquee")]
+    public RectTransform[] marqueeRowsLeft;   // rows that scroll left  (→ to ←)
+    public RectTransform[] marqueeRowsRight;  // rows that scroll right (← to →)
+    public float marqueeSpeed = 80f;          // pixels per second
+
     [Header("Timing")]
     public float fadeDuration = 0.55f;
     public float textFadeDuration = 0.45f;
@@ -26,6 +31,8 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        foreach (var row in marqueeRowsLeft) StartMarquee(row, scrollLeft: true);
+        foreach (var row in marqueeRowsRight) StartMarquee(row, scrollLeft: false);
         logoGroup.alpha = 0f;
         bibleTextGroup.alpha = 0f;
         wordleTextGroup.alpha = 0f;
@@ -51,6 +58,11 @@ public class MainMenu : MonoBehaviour
 
         seq.AppendInterval(0.08f);
         seq.Append(AnimateButton(button3Group, button3Rect));
+
+        seq.OnComplete(() =>
+        {
+
+        });
     }
 
     Tween AnimateButton(CanvasGroup group, RectTransform rt)
@@ -62,6 +74,20 @@ public class MainMenu : MonoBehaviour
         s.Join(group.DOFade(1f, buttonFadeDuration).SetEase(Ease.OutCubic));
         s.Join(rt.DOAnchorPos(end, buttonFadeDuration).SetEase(Ease.OutBack));
         return s;
+    }
+
+    void StartMarquee(RectTransform row, bool scrollLeft)
+    {
+        float width = row.rect.width;
+        float start = scrollLeft ? width * 0.5f : -width * 0.5f;
+        float end = scrollLeft ? -width * 0.5f : width * 0.5f;
+        float duration = width / marqueeSpeed;
+
+        row.anchoredPosition = new Vector2(start, row.anchoredPosition.y);
+        row.DOAnchorPosX(end, duration)
+           .SetEase(Ease.Linear)
+           .SetLoops(-1, LoopType.Restart)
+           .OnStepComplete(() => row.anchoredPosition = new Vector2(start, row.anchoredPosition.y));
     }
 
     void InitButtonGroup(CanvasGroup group, RectTransform rt)

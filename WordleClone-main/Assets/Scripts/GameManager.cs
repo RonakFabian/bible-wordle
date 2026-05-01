@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -157,7 +158,7 @@ public class GameManager : MonoBehaviour
     {
         if (resultPanel == null) return;
 
-        if (resultTitle != null) resultTitle.text = won ? "YOU WIN!" : "GAME OVER";
+        if (resultTitle != null) resultTitle.text = won ? "Your Word Was:" : "GAME OVER";
         if (resultWord != null) resultWord.text = currentWord.ToUpper();
 
         resultPanel.SetActive(true);
@@ -335,5 +336,11 @@ public class GameManager : MonoBehaviour
         foreach (List<GameObject> row in allPanels)
             foreach (GameObject tile in row)
                 tile.GetComponentInChildren<TextMeshProUGUI>().text = "";
+    }
+
+    public void ChangeLevel(string s)
+    {
+        SceneManager.LoadScene(s);
+
     }
 }
