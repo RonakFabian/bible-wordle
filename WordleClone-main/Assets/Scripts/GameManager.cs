@@ -45,6 +45,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float flipDuration = 0.25f;
     [SerializeField] private float flipDelay = 0.08f;
 
+    [Header("Game Panel Intro")]
+    [SerializeField] private CanvasGroup gamePanel;
+    [SerializeField] private float introDelay = 0.7f;
+    [SerializeField] private float introDuration = 2f;
+    [SerializeField] private float introSlide = 60f;
+
     [Header("Win / Lose UI")]
     [SerializeField] private GameObject resultPanel;
     [SerializeField] private TextMeshProUGUI resultTitle;
@@ -57,16 +63,46 @@ public class GameManager : MonoBehaviour
     private bool gameOver = false;
     private Dictionary<char, LetterResult> keyBestResult = new();
 
+    [Header("Audio")]
+    private AudioSource audioSource;
+
+    public AudioClip winClip;
+    public AudioClip wrongClip;
+    public AudioClip keyboardTap;
+    public AudioClip backClip;
+
     void Start()
     {
         allPanels = new();
         foreach (Row r in rows) allPanels.Add(r.tiles);
-
+        audioSource = GetComponent<AudioSource>();
         LoadWordLists();
         PickRandomWord();
         ClearAllPanels();
 
         if (resultPanel != null) resultPanel.SetActive(false);
+
+        AnimateGamePanelIn();
+    }
+
+    void AnimateGamePanelIn()
+    {
+        if (gamePanel == null) return;
+
+        isFlipping = true;
+
+        RectTransform rt = gamePanel.GetComponent<RectTransform>();
+        Vector2 finalPos = rt != null ? rt.anchoredPosition : Vector2.zero;
+
+        gamePanel.alpha = 0f;
+        if (rt != null) rt.anchoredPosition = finalPos + Vector2.down * introSlide;
+
+        Sequence seq = DOTween.Sequence();
+        seq.AppendInterval(introDelay);
+        seq.Append(gamePanel.DOFade(1f, introDuration).SetEase(Ease.OutQuad));
+        if (rt != null)
+            seq.Join(rt.DOAnchorPos(finalPos, introDuration).SetEase(Ease.OutBack));
+        seq.OnComplete(() => isFlipping = false);
     }
 
     // ── Input ─────────────────────────────────────────────────────────────────
@@ -84,26 +120,32 @@ public class GameManager : MonoBehaviour
 
         PunchTile(tile);
         PunchKey(letter);
+        PlaySound(keyboardTap);
     }
 
     public void Backspace()
     {
+        PlaySound(keyboardTap);
         if (isFlipping || gameOver) return;
         if (currentGuess.Length == 0) return;
 
         currentGuess = currentGuess[..^1];
         currentTextIndex = Mathf.Max(0, currentTextIndex - 1);
         allPanels[currentPanel][currentTextIndex].GetComponentInChildren<TextMeshProUGUI>().text = "";
+
     }
 
     public void Submit()
     {
+        PlaySound(keyboardTap);
+
         if (isFlipping || gameOver) return;
         if (currentGuess.Length < wordLength) return;
         if (!IsValidGuess(currentGuess))
         {
             Debug.Log("Not a valid word: " + currentGuess);
             ShakeRow(allPanels[currentPanel]);
+            PlaySound(wrongClip);
             return;
         }
 
@@ -118,10 +160,12 @@ public class GameManager : MonoBehaviour
             UpdateKeySprites(submittedGuess, results);
             isFlipping = false;
 
+
             if (won)
             {
                 gameOver = true;
                 StartCoroutine(WinSequence(row));
+                PlaySound(winClip);
             }
             else
             {
@@ -133,9 +177,17 @@ public class GameManager : MonoBehaviour
                 {
                     gameOver = true;
                     ShowResultPanel(false);
+
+
                 }
+
             }
         }));
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 
     // ── Win / Lose ────────────────────────────────────────────────────────────
@@ -258,6 +310,7 @@ public class GameManager : MonoBehaviour
                 tmp.color = Color.white;
                 break;
             }
+            PlaySound(backClip);
         }
     }
 
