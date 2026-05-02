@@ -3682,7 +3682,7 @@ MonoBehaviour:
   resultWord: {fileID: 672493191}
   currentPanel: 0
   currentTextIndex: 0
-  winClip: {fileID: 8300000, guid: fa6360f77be115c44beb74865360706f, type: 3}
+  winClip: {fileID: 8300000, guid: e054befe00ece274da8376ccc59f2e3b, type: 3}
   wrongClip: {fileID: 8300000, guid: bb2c1fbfdc1603147b32535320b73ba2, type: 3}
   keyboardTap: {fileID: 8300000, guid: f432b8b55aeb3cc48a34ab72cefef3fc, type: 3}
   backClip: {fileID: 8300000, guid: 4bb195ae8ce287c44a7990cc16c6d802, type: 3}
